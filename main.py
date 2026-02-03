@@ -632,6 +632,20 @@ def create_correlation_page(df):
         st.pyplot(fig_phys_combat)
 
     st.markdown("---")
+    st.subheader("Correlation Summary Statistics")
+
+    top_positive, top_negative = get_strongest_correlations(df, n=5)
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("**Top 5 Positive Correlations:**")
+        st.dataframe(top_positive, use_container_width=True, hide_index=True)
+
+    with col2:
+        st.markdown("**Top 5 Negative Correlations:**")
+        st.dataframe(top_negative, use_container_width=True, hide_index=True)
+        
+    st.markdown("---")
     st.subheader("Physical vs Combat Scatter Plots")
 
     fig_grid = create_physical_combat_scatter_grid(df)
@@ -649,19 +663,6 @@ def create_correlation_page(df):
     fig_total_combat = plot_total_combat_stats_histogram(df)
     st.pyplot(fig_total_combat)
 
-    st.markdown("---")
-    st.subheader("Correlation Summary Statistics")
-
-    top_positive, top_negative = get_strongest_correlations(df, n=5)
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("**Top 5 Positive Correlations:**")
-        st.dataframe(top_positive, use_container_width=True, hide_index=True)
-
-    with col2:
-        st.markdown("**Top 5 Negative Correlations:**")
-        st.dataframe(top_negative, use_container_width=True, hide_index=True)
 
 
 def main():
