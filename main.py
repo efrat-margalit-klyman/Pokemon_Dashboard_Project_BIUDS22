@@ -7,10 +7,6 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
 
-sns.set_context('notebook', font_scale=1.1)
-sns.set_style('whitegrid')
-plt.rcParams['figure.facecolor'] = 'white'
-plt.rcParams['axes.facecolor'] = '#f8f9fa'
 
 API_BASE_URL = "https://pokeapi.co/api/v2"
 
