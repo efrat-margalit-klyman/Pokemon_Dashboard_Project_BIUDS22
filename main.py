@@ -15,7 +15,7 @@ COMBAT_STATS = ['attack', 'defense', 'special-attack', 'special-defense', 'speed
 ALL_NUMERIC = ['height', 'weight', 'attack', 'defense', 'special-attack', 'special-defense', 'speed']
 
 
-def fetch_pokemon_list(limit=1000):
+def fetch_pokemon_list(limit=1350):
     url = f"{API_BASE_URL}/pokemon?limit={limit}"
     response = requests.get(url)
     if response.status_code == 200:
