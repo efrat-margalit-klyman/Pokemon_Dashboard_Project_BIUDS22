@@ -117,7 +117,6 @@ Access the live deployed version of this dashboard:
 
 **[Pokemon Data Dashboard on Streamlit Cloud](https://pokemondashboardclassprojectpython-biuds22.streamlit.app/)**
 
-> *Note: Replace the URL above with your actual Streamlit Cloud deployment link after publishing.*
 
 ### Deploying Your Own Instance
 
