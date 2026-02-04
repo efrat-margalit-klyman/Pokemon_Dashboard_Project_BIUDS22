@@ -141,7 +141,7 @@ def add_derived_columns(df):
     return result_df
 
 
-def filter_outliers(df, weight_percentile=0.95, height_percentile=0.95):
+def filter_outliers(df, weight_percentile=0.9, height_percentile=0.9):
     weight_threshold = df['weight'].quantile(weight_percentile)
     height_threshold = df['height'].quantile(height_percentile)
 
