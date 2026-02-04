@@ -700,7 +700,7 @@ def main():
                 progress_bar.progress(progress)
                 status_text.text(f"Fetching Pokemon {current}/{total}...")
 
-            df = fetch_and_process_pokemon_data(limit=1000, progress_callback=update_progress)
+            df = fetch_and_process_pokemon_data(limit=1350, progress_callback=update_progress)
             st.session_state.pokemon_df = df
             st.session_state.data_loaded = True
 
